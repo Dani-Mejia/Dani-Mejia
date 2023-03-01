@@ -10,8 +10,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper,
-.projects {
+.wrapper {
     width: 100vw;
     height: 100vh;
     background-color: #1B1A34;
@@ -78,6 +77,28 @@ h1 {
 
 span {
     color: aqua;
+}
+
+.typewriter {
+    display: block;
+    
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 16ch;
+
+    animation: typing 2s steps(16), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {width: 0}
+
+}
+
+@keyframes blink {
+    50% {border-color: transparent}
+
 }
 
 .download-cv {
@@ -161,7 +182,10 @@ span {
     width: 300px;
     background-color: #2b3058;
     height: 350px;
+    margin: 1em;
     transition: transform ease-in .4s
+    
+    
 }
 .card_img {
     width: 100%;
@@ -218,6 +242,7 @@ span {
 }
 
 .projects {
-    
-
+    width: 100vw;
+    background-color: #1B1A34;
+    color: #fff;
 }
