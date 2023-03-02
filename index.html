@@ -17,26 +17,23 @@
                 <h2>D<span>M</span></h2>
             </div>
             <ul class="menu">
-                <li ><a class="active" href="#">Home</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Projects</a></li>
+                <li ><a class="active" href="#Main" data-afte="main">Home</a></li>
+                <li><a href="#About" data-afte="About">About me</a></li>
+                <li><a href="#Projects " data-afte="Projects">Projects</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
         </nav>
     </header>
-    <main class="main">
+    <main class="main" id="Main">
         <div class="info-content">
             <h1 class="typewriter">I´m <span>Daniel</span> Mejía</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident sunt harum qui alias, facere veritatis suscipit, et accusamus libero ratione iure similique placeat, enim quae repellat cumque labore explicabo aut.</p>
-            <a download href="#">
-                <button class="download-cv"> Download cv</button>
-            </a>
+            <p>Soy un estudiante en ingeniería sistemas con pasión por el diseño gráfico y el desarrollo web front-end. Me enfoco en crear soluciones visuales atractivas y funcionales que brinden una excelente experiencia de usuario.</p>
         </div>
-        <img src="imagenes/Shawn-Mendes-PNG-Download-Image.png" alt="Jose Daniel picture">
+        <img src="imagenes/me.PNG" alt="Jose Daniel picture">
     </main> 
 </div>
 
-<div class="about">
+<div class="about" id="About">
     <img src="imagenes/programador.jpg" alt="Programador web imagen">
 
 
@@ -45,11 +42,14 @@
     <div class="divider"> </div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus labore, sapiente dolores illo molestiae repellendus nisi aliquam. Praesentium, error officiis tenetur maiores exercitationem sapiente explicabo provident voluptatum, eos rem nulla?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum explicabo nisi in magnam aspernatur facere natus recusandae sit quos autem, odio laboriosam incidunt eos cupiditate impedit qui facilis voluptates assumenda!</p>
-    <button class="download-cv">Read more</button>
+    <a download href="imagenes/CV.pdf">
+        <button class="download-cv"> Download cv</button>
+    </a>
+    
 </div>
 </div>
 
-<div class="projects">
+<div class="projects" id="Projects">
     <div class="projects-headings">
         <h2>My <span>Projects</span></h2>
         <div class="divider"></div>
@@ -73,7 +73,7 @@
             </div>
             <div class="proyect-details-content">
                 <a class="boton" href="">
-                    <button class="project-details download-cv">
+                    <button class="project-details">
                         Project details
                     </button>
                 </a>
@@ -137,6 +137,21 @@
         </div>
 
     </div>
+
+</div>
+
+<footer class="footer"> 
+    <div class="footer-content">
+      <h2>Daniel Mejía</h2>
+      <h5>Frontend Developer</h5>
+    </div>
+    <div class="sotial-networks">
+      <a href=""><i class="fab fa-linkedin"></i></a>
+      <a href=""><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </footer>
+
+
 
 </div>
 

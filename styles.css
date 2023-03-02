@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    transition: opacity 0.5s ease-in-out;
+  }
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -21,6 +26,9 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 2em;
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(#1B1A34 60%, transparent);
 }
 
 .brand {
@@ -68,6 +76,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
+    padding-top: 150px;
 }
 
 h1 {
@@ -112,16 +121,17 @@ span {
 }
 
 .download-cv:hover{
-    background-color: #fff;
+    background-color: #1B1A34;
     box-shadow: none;
+    color: #fff;
 
 }
 
 .main img {
-    width: 500px;
+    width: 400px;
     border: 7px solid aqua;
-    
-    margin-left: 4cm;
+    margin-top: 3px;
+    margin-left: 2cm;
 }
 
 .about {
@@ -234,7 +244,22 @@ span {
 
 }
 
+.project-details{
+    padding: 10px 20px;
+    background: aqua;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
 
+}
+
+.project-details:hover{
+    background-color: #fff;
+    box-shadow: none;
+
+}
 
 .card:hover{
     transform: scale(1.1);
@@ -246,3 +271,42 @@ span {
     background-color: #1B1A34;
     color: #fff;
 }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    padding: 2em;
+    background-color: aqua;
+  }
+  
+  .footer-content h2 {
+    font-size: 3em;
+  }
+  
+  .footer-content h5 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .sotial-networks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 1em;
+    
+  }
+  
+  .sotial-networks i {
+    font-size: 1.5em;
+  }
+
+  .sotial-networks a {
+    text-decoration: none;
+    color: black;
+    padding: 0.1em;
+
+  }
