@@ -53,11 +53,41 @@ body {
 }
 
 
-.menu a {
+.menu a{
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
 }
+
+
+.menu-lenguaje {
+    list-style: none;
+    position: absolute;
+    display: none;
+    width: 110px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.menu li:hover .menu-lenguaje {
+    display: block;
+}
+
+.menu-lenguaje li a {
+    color: #fff;
+}
+.menu-lenguaje li a:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.menu-lenguaje li a{
+    display: block;
+    color: white;
+    padding: 16px 15px, 15px, 20px;
+}
+
+
 
 .menu .active{
     color: aqua;
@@ -69,6 +99,9 @@ body {
     color: #1B1A34;
     transition: ease-in .4s;
 }
+
+
+
 .main{
     margin: 0 auto;
     width: 80vw;
@@ -88,19 +121,41 @@ span {
     color: aqua;
 }
 
-.typewriter {
+.typewriterES {
     display: block;
     
     font-family: monospace;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 16ch;
+    width: 20ch;
 
-    animation: typing 2s steps(16), blink .5s infinite step-end alternate;
+    animation: typingES 2s steps(20), blink .5s infinite step-end alternate;
     overflow: hidden;
 }
 
-@keyframes typing {
+@keyframes typingES {
+    from {width: 0}
+
+}
+
+@keyframes blink {
+    50% {border-color: transparent}
+
+}
+
+.typewriterIN {
+    display: block;
+    
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 17ch;
+
+    animation: typingES 2s steps(17), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typingIN {
     from {width: 0}
 
 }
@@ -134,16 +189,22 @@ span {
     margin-left: 2cm;
 }
 
+
+
 .about {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     width: 100vw;
     align-items: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 95%, rgba(27,26,52,1) 100%);
 }
 
 .about img{
     width: 100%;
     grid-column: 1/5;
+    font-size: 400px;
+    margin-top: 30px
     
 }
 
@@ -160,7 +221,7 @@ span {
 .divider {
     height: 4px;
     width: 60px;
-    background-color: aqua;
+    background-color: #00ffff;
     margin-top: 5px;
     margin-bottom: 2em;
 }
@@ -188,7 +249,7 @@ span {
     justify-content: center;
 }
 
-.card {
+.card1, .card2, .card3 {
     width: 300px;
     background-color: #2b3058;
     height: 350px;
@@ -223,7 +284,15 @@ span {
 
 }
 
-.card .project-details { 
+.projects-links i img{
+    height: 22px;
+    width: 100%;
+    color: #fff;
+
+
+}
+
+.card1 .project-details { 
     display: flex;
     justify-content: center;
     margin: 1em;
@@ -231,11 +300,35 @@ span {
     text-transform: uppercase;
 }
 
-.card .boton {
+.card2 .project-details { 
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    color: #1B1A34;
+    text-transform: uppercase;
+}
+ 
+.card3 .project-details { 
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    color: #1B1A34;
+    text-transform: uppercase;
+}
+
+.card1 .boton {
     text-decoration: none;
 
 }
 
+.card2 .boton {
+    text-decoration: none;
+}
+
+.card3 .boton {
+    text-decoration: none;
+
+}
 .proyect-details-content {
     display: flex;
     width: 100%;
@@ -261,15 +354,86 @@ span {
 
 }
 
-.card:hover{
+.card1:hover{
+    transform: scale(1.1);
+    transition: ease-in .4s;
+}
+
+.card2:hover{
+    transform: scale(1.1);
+    transition: ease-in .4s;
+}
+
+.card3:hover{
     transform: scale(1.1);
     transition: ease-in .4s;
 }
 
 .projects {
     width: 100vw;
-    background-color: #1B1A34;
+    background: rgb(27,26,52);
+    background: linear-gradient(0deg, rgba(27,26,52,1) 95%, rgba(255,255,255,1) 100%);
     color: #fff;
+}
+
+.habilidades {
+    width: 100vw;
+    background: rgb(27,26,52);
+    background: linear-gradient(180deg, rgba(27,26,52,1) 99%, rgba(0,255,255,1) 100%);
+    color: #fff;
+
+}
+
+.habilidades .container-slider{
+    height: 100vh;
+    margin-top: -150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(1000px)rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px)rotateY(360deg);
+    }
+}
+
+.slider span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(380px);
+}
+
+.slider span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+.slider span:hover img{
+    transform: translateY(-50px) scale(1.2);
 }
 
 .footer {
@@ -280,7 +444,7 @@ span {
     width: 100vw;
     height: 200px;
     padding: 2em;
-    background-color: aqua;
+    background-color: #00ffff;
   }
   
   .footer-content h2 {
