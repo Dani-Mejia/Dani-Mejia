@@ -1,5 +1,5 @@
 const  typed = new Typed('.typed', {
-    strings: ['Yo soy <i>Daniel</i> Mejía', 'Si lo podemos <i>imaginar</i> lo podemos <i>crear</i>'],
+    strings: ['I´m <i>Daniel</i> Mejía', 'If we can <i>imagine</i> it we can <i>create it</i>'],
     typeSpeed: 40,
     backSpeed: 45,
     loop: true,
@@ -12,4 +12,3 @@ const  typed = new Typed('.typed', {
     loopCount: false,
      
 });
-

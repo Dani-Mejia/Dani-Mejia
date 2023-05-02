@@ -112,6 +112,20 @@ body {
     padding-top: 150px;
 }
 
+.Frase span {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.Frase span  i{
+    font-style: normal;
+    font-weight: bold;
+    color:#00ffff;
+    
+}
+
+
+
 h1 {
     font-size: 3em;
 
@@ -187,6 +201,20 @@ span {
     border: 7px solid aqua;
     margin-top: 3px;
     margin-left: 2cm;
+}
+
+
+.animate-bg::before, .animate-bg::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(120deg, #ff2a2a, #009ac0, #1b4acc,);
+    background-size: 300%;
+    width: calc(100% +16);
+    height: calc(100% +16);
+    z-index: -1;
+    animation: BGgradient 15s ease infinite;
 }
 
 
