@@ -12,3 +12,25 @@ const  typed = new Typed('.typed', {
     loopCount: false,
      
 });
+
+
+const btn = document.getElementById('Btn-submit');
+
+document.getElementById('Form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'service_v1fg7gl';
+   const templateID = 'template_anophpm';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
